@@ -12,7 +12,7 @@ WORKDIR $APP_HOME
 COPY . .
 
 # Установим зависимости внутри контейнера
-RUN pip install -r requirements.txt
+RUN poetry install -r requirements.txt
 
 # Обозначим порт где работает приложение внутри контейнера
 EXPOSE 5000
